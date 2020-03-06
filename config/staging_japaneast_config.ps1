@@ -1,5 +1,5 @@
 $SUBSCRIPTION = "xxxxx"
-$EXP_RG_ARRAY = (
+$SPEC_EXP_RG_ARRAY = (
     @{"name"="testFunc01";         "location"="japaneast"},
     @{"name"="testARMtemplate001"; "location"="japaneast"},
     @{"name"="testMon03";          "location"="japaneast"},

@@ -16,7 +16,8 @@ Vagrant.configure("2") do |config|
     add-apt-repository universe
     apt-get update
     apt-get install -y powershell
-    pwsh -Command "Install-Module -Name Pester -Force"
-    pwsh -Command "Install-Module -Name Az -AllowClobber -Scope AllUsers -PassThru"
+    pwsh -Command "Install-Module -Name Pester -Force -PassThru"
+    pwsh -Command "Install-Module -Name Az -AllowClobber -Scope AllUsers -Force -PassThru"
+    pwsh -Command "Invoke-WebRequest -Uri https://aka.ms/installazurecliwindows -OutFile .\AzureCLI.msi; Start-Process msiexec.exe -Wait -ArgumentList '/I AzureCLI.msi /quiet'"
   SHELL
 end

@@ -1,3 +1,3 @@
-function huga {
-    Write-Host huga
+function hoge() {
+    Write-Host "aaa"
 }
